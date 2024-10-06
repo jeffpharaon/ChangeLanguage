@@ -23,7 +23,7 @@ C++ Console
 
 ### ⬇️УСТАНОВКА
 
-[Скачать Change Language 0.0.1 release Windows](https://github.com/jeffpharaon/ChangeLanguage/blob/main/Download/ChangeLanguageInstaller.exe)  
+[Скачать Change Language 0.0.1 release Windows](https://github.com/jeffpharaon/ChangeLanguage/raw/refs/heads/main/Download/ChangeLanguageInstaller.exe)  
 После запуска установщика введите путь например `C:\User\Apps` и дождитесь установки.  
 Приложение будет размещено на рабочем столе и готово к использованию.
 

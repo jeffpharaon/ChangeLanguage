@@ -8,21 +8,21 @@ int ru();
 int en();
 string get(const string& filename);
 void update(const string& filename, const string& change);
-void execute(const string& command);
+void execute(const string& command); 
 
-int main() {
+int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int nShowCmd) {
+    HWND hwnd = GetConsoleWindow();
+    ShowWindow(hwnd, SW_HIDE);
+    
     string language = get("Language.json");
-
     if (language == "RU") {
         ru();
         update("language.json", "EN");
     }
-
     else if (language == "EN") {
         en();
         update("language.json", "RU");
     }
-
     return 0;
 }
 
@@ -30,11 +30,10 @@ void execute(const string& command) {
     string fullCommand = "powershell.exe -Command \"" + command + "\"";
     STARTUPINFOA si;
     PROCESS_INFORMATION pi;
-
     ZeroMemory(&si, sizeof(si));
     si.cb = sizeof(si);
     ZeroMemory(&pi, sizeof(pi));
-
+    
     if (CreateProcessA(
         NULL,
         const_cast<LPSTR>(fullCommand.c_str()),
@@ -46,22 +45,28 @@ void execute(const string& command) {
         NULL, 
         &si, 
         &pi)) {
-            WaitForSingleObject(pi.hProcess, INFINITE);
-            CloseHandle(pi.hProcess);
-            CloseHandle(pi.hThread);
-        }
+        WaitForSingleObject(pi.hProcess, INFINITE);
+        CloseHandle(pi.hProcess);
+        CloseHandle(pi.hThread);
+    }
 }
 
-int ru() { execute("Set-WinUserLanguageList ru-RU -Force"); return 0; }
-int en() { execute("Set-WinUserLanguageList en-US -Force"); return 0; }
+int ru() { 
+    execute("Set-WinUserLanguageList ru-RU -Force"); 
+    return 0; 
+}
+
+int en() { 
+    execute("Set-WinUserLanguageList en-US -Force"); 
+    return 0; 
+}
 
 string get(const string& filename) {
     ifstream inputFile(filename);
     if (!inputFile.is_open()) return "";
-
+    
     string line;
     string language;
-
     while (getline(inputFile, line)) {
         size_t keyPos = line.find("\"language\"");
         if (keyPos != string::npos) {
@@ -78,7 +83,6 @@ string get(const string& filename) {
             }
         }
     }
-
     inputFile.close();
     return language;
 }
@@ -89,7 +93,6 @@ void update(const string& filename, const string& change) {
 
     string fileContent;
     string line;
-
     while (getline(inputFile, line)) {
         size_t keyPos = line.find("\"language\"");
         if (keyPos != string::npos) {
@@ -105,7 +108,6 @@ void update(const string& filename, const string& change) {
         }
         fileContent += line + "\n";
     }
-
     inputFile.close();
 
     ofstream outputFile(filename);

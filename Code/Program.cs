@@ -31,7 +31,7 @@ namespace ChangeLanguage
         }
     }
 
-    class Engine : Form
+    file class Engine : Form
     {
         private IKeyboardMouseEvents _globalHook;
 

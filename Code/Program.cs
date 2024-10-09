@@ -72,8 +72,7 @@ namespace ChangeLanguage
                 process.StartInfo.FileName = path;
                 process.Start();
                 process.WaitForExit();
-            } 
-            catch { return; }
+            } catch { return; }
         }
 
         [STAThread]

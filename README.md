@@ -1,5 +1,5 @@
 # Change Language 
-C++ Console
+C++ / C# Console
 
 ## ⬜️ДОКУМЕНТАЦИЯ
 

@@ -80,6 +80,7 @@ namespace ChangeLanguage
         {
             SetConsole.Free();
             Background.BackgroundWorker();
+
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Engine());

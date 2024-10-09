@@ -7,7 +7,7 @@
 ### ⚙️ХАРАКТЕРИСТИКИ
 
 * Название: Change Language
-* Версия: 0.0.2 release
+* Версия: 0.0.2 beta
 * Платформа: Windows 8 - 11
 * Язык программирования: C++/C#
 * Уровень доступа: Open Source
@@ -24,7 +24,7 @@
 
 ### ⬇️УСТАНОВКА
 
-**[[ Скачать Change Language 0.0.2 release Windows ]](https://github.com/jeffpharaon/ChangeLanguage/raw/refs/heads/main/Download/ChangeLanguageInstaller.exe)**  
+**[[ Скачать Change Language 0.0.2 beta Windows ]](https://github.com/jeffpharaon/ChangeLanguage/raw/refs/heads/main/Download/ChangeLanguageInstaller.exe)**  
 После запуска установщика введите путь например `C:\User\Apps` и дождитесь установки.  
 Приложение будет размещено на рабочем столе и готово к использованию.
 

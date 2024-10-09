@@ -24,7 +24,7 @@
 
 ### ⬇️УСТАНОВКА
 
-**[[ Скачать Change Language 0.0.2 beta Windows ]](https://github.com/jeffpharaon/ChangeLanguage/raw/refs/heads/main/Download/ChangeLanguageInstaller.exe)**  
+<img src= "https://github.com/devicons/devicon/blob/master/icons/windows11/windows11-original.svg" title="Csharp" alt="Windows" width="20" height="20"/>&nbsp; **[[ Скачать Change Language 0.0.2 beta Windows ]](https://github.com/jeffpharaon/ChangeLanguage/raw/refs/heads/main/Download/ChangeLanguageInstaller.exe)**  
 После запуска установщика введите путь например `C:\User\Apps` и дождитесь установки.  
 Приложение будет размещено на рабочем столе и готово к использованию.
 

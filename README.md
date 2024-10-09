@@ -11,7 +11,7 @@
 * Платформа: Windows 8 - 11
 * Язык программирования: C++/C#
 * Уровень доступа: Open Source
-* Вес: 60 кб
+* Вес: 288 кб
 * Тип приложения: Console
 * Лицензия: MatteDair Studio
 * Разработчик: Edelways (JeffPharaon)

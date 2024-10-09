@@ -12,7 +12,7 @@
 * Язык программирования: C++/C#
 * Уровень доступа: Open Source
 * Вес: 288 кб
-* Тип приложения: Console
+* Тип приложения: Windows Service
 * Лицензия: MatteDair Studio
 * Разработчик: Edelways (JeffPharaon)
 * Цена: Бесплатно

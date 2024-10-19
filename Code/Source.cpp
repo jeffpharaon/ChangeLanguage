@@ -4,28 +4,6 @@
 #include <string>
 using namespace std;
 
-int ru();
-int en();
-string get(const string& filename);
-void update(const string& filename, const string& change);
-void execute(const string& command); 
-
-int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int nShowCmd) {
-    HWND hwnd = GetConsoleWindow();
-    ShowWindow(hwnd, SW_HIDE);
-    
-    string language = get("Language.json");
-    if (language == "RU") {
-        ru();
-        update("language.json", "EN");
-    }
-    else if (language == "EN") {
-        en();
-        update("language.json", "RU");
-    }
-    return 0;
-}
-
 void execute(const string& command) {
     string fullCommand = "powershell.exe -Command \"" + command + "\"";
     STARTUPINFOA si;
@@ -116,3 +94,20 @@ void update(const string& filename, const string& change) {
         outputFile.close();
     }
 }
+
+int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int nShowCmd) {
+    HWND hwnd = GetConsoleWindow();
+    ShowWindow(hwnd, SW_HIDE);
+    
+    string language = get("Language.json");
+    if (language == "RU") {
+        ru();
+        update("language.json", "EN");
+    }
+    else if (language == "EN") {
+        en();
+        update("language.json", "RU");
+    }
+    return 0;
+}
+ 
